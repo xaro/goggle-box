@@ -1,5 +1,5 @@
-module Couch
-  module Potato
-    # Your code goes here...
-  end
+module CouchPotato
+  require 'couch-potato/yaml.rb'
+  require 'httparty'
+  include HTTParty
 end
