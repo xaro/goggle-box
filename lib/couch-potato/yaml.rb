@@ -1,7 +1,7 @@
 require 'ostruct'
 
 class Hash
-  def self.objectify(object)
+  def objectify(object = self)
     return case object
     when Hash
       object = object.clone
