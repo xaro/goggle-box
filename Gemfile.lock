@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    couch-potato (0.0.1)
+    goggle-box (0.0.1)
       httparty
       rspec
 
@@ -25,6 +25,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  couch-potato!
+  goggle-box!
   httparty
   rspec
