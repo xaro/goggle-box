@@ -1,6 +1,6 @@
-module CouchPotato
+module GoggleBox
   module TVRage
-    require 'couch-potato/tvrage/show.rb'
-    require 'couch-potato/tvrage/episode.rb'
+    require 'goggle-box/tvrage/show.rb'
+    require 'goggle-box/tvrage/episode.rb'
   end
 end

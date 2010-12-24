@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "couch-potato/version"
+require "goggle-box/version"
 
 Gem::Specification.new do |s|
-  s.name        = "couch-potato"
-  s.version     = CouchPotato::VERSION
+  s.name        = "goggle-box"
+  s.version     = GoggleBox::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Paul Ingham"]
   s.email       = ["paul.ingham@beefeatingmonkeys.com"]
@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{}
   s.description = %q{TODO: Write a gem description}
 
-  s.rubyforge_project = "couch-potato"
+  s.rubyforge_project = "goggle-box"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

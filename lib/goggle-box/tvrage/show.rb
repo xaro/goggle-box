@@ -1,4 +1,4 @@
-module CouchPotato
+module GoggleBox
   module TVRage
     class Show
       include HTTParty

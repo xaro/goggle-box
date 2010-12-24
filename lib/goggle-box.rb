@@ -1,6 +1,5 @@
-module CouchPotato
+module GoggleBox
   require 'httparty'
-  require 'couch-potato/objectify.rb'
-  require 'couch-potato/tvrage.rb'
-  # require 'couch-potato/tvrage/show.rb'
+  require 'goggle-box/objectify.rb'
+  require 'goggle-box/tvrage.rb'
 end
