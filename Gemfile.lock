@@ -2,24 +2,29 @@ PATH
   remote: .
   specs:
     couch-potato (0.0.1)
-      activesupport
       httparty
-      lazy
+      rspec
 
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (3.0.3)
     crack (0.1.8)
+    diff-lcs (1.1.2)
     httparty (0.6.1)
       crack (= 0.1.8)
-    lazy (0.9.6)
+    rspec (2.3.0)
+      rspec-core (~> 2.3.0)
+      rspec-expectations (~> 2.3.0)
+      rspec-mocks (~> 2.3.0)
+    rspec-core (2.3.1)
+    rspec-expectations (2.3.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.3.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport
   couch-potato!
   httparty
-  lazy
+  rspec

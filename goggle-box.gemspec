@@ -20,6 +20,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   
   s.add_dependency(%q<httparty>)
-  s.add_dependency(%q<activesupport>)
-  s.add_dependency(%q<lazy>)
+  s.add_dependency(%q<rspec>)
 end
