@@ -70,20 +70,20 @@ module GoggleBox::TVRage
         end
         
         it "Show should respond to episodelist" do
-          subject.episodelist.class.should be(OpenStruct)
+          subject.episode_list.class.should be(OpenStruct)
         end
 
         describe "Shows with just one season" do
           it "Episodelist should have an OpenStruct of a season if just one" do
-            subject.episodelist.season.class.should be(OpenStruct)
+            subject.episode_list.seasons.class.should be(OpenStruct)
           end
 
           it "Season should have an array of episodes if more than one" do
-            subject.episodelist.season.episode.class.should be(Array)
+            subject.episode_list.seasons.episodes.class.should be(Array)
           end
           
           it "Season should more than one episode to constitute an array" do
-            subject.episodelist.season.episode.size.should have_at_least(2).items
+            subject.episode_list.seasons.episodes.size.should have_at_least(2).items
           end
         end
 
@@ -94,15 +94,15 @@ module GoggleBox::TVRage
           end
           
           it "Episodelist should have an Array of seasons" do
-            subject.episodelist.season.class.should be(Array)
+            subject.episode_list.seasons.class.should be(Array)
           end
 
           it "Array of Seasons shouldn't be equal to one" do
-            subject.episodelist.season.size.should have_at_least(2).items
+            subject.episode_list.seasons.size.should have_at_least(2).items
           end
           
           it "Episode should have an OpenStruct if only one episode" do
-            subject.episodelist.season[1].episode.class.should be(OpenStruct)
+            subject.episode_list.seasons[1].episodes.class.should be(OpenStruct)
           end
           
         end   
