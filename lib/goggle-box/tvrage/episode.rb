@@ -6,7 +6,7 @@ module GoggleBox
       base_uri 'services.tvrage.com'
       
       class << self
-        def episode_list_by_season_for_show(show_id, episodes = [])
+        def episode_list_by_season_for_show(show_id = nil)
           response = get('/myfeeds/episode_list.php', :query => {:key => 'd61mzsd8LETGxD0CAL7e', :sid => show_id}).parsed_response['Show']['Episodelist']
           response.objectify
         end
