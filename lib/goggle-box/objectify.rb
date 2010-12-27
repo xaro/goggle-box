@@ -1,11 +1,23 @@
 require 'ostruct'
 
 module Objectify
+  
+  DICTIONARY = {
+    'season' => 'seasons',
+    'episodelist' => 'episode_list',
+    'episode' => 'episodes'
+  }
+  
+  def swap_words(word)
+    return word unless DICTIONARY[word]
+    DICTIONARY[word]
+  end
+  
   def objectify(object = self)
     return case object
     when Hash
       obj = {}
-      object.each { |k,v| obj[k.downcase] = objectify(v) }
+      object.each { |k,v| obj[swap_words(k.downcase)] = objectify(v) }
       OpenStruct.new(obj)
     when Array
       object = object.clone
