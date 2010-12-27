@@ -21,13 +21,13 @@ It allows you to search and retrieve Shows and Episodes from the TVRage API. Obj
     >> show = GoggleBox::TVRage::Show.new(shows.first.showid, :lazy => true)
     
     - If one season only
-    >> show.episodelist.season => Only season or array of seasons
-    >> show.episodelist.season.episode => Episodes in this season
+    >> show.episode_list.seasons => Only season or array of seasons
+    >> show.episode_list.seasons.episodes => Episodes in this season
     
     - If more than one season
-    >> show.episodelist.season.first => First season
-    >> show.episodelist.season.second => Second season etc
-    >> show.episodelist.season.first.episode => Array of episodes in season etc
+    >> show.episode_list.seasons.first => First season
+    >> show.episode_list.seasons.second => Second season etc
+    >> show.episode_list.seasons.first.episodes => Array of episodes in season etc
     
 #### Episode Information
     >> GoggleBox::TVRage::Episode.listings_by_show(show.showid)
