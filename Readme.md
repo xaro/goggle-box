@@ -29,6 +29,19 @@ It allows you to search and retrieve Shows and Episodes from the TVRage API. Obj
     >> show.episodelist.season.second => Second season etc
     >> show.episodelist.season.first.episode => Array of episodes in season etc
     
+#### Episode Information
+    >> GoggleBox::TVRage::Episode.listings_by_show(show.showid)
+    => #<OpenStruct season=#<OpenStruct episode=[#<OpenStruct prodnum="296777", seasonnum="01", epnum="1", link="http://www.tvrage.com/Better_With_You/episodes/1064933988", title="Pilot", airdate="2010-09-22">]..>
+      
+    >> GoggleBox::TVRage::Episode.information(show.showid, '1x01')
+    => #<OpenStruct number="01x01", url="http://www.tvrage.com/Better_Together/episodes/1064933988", title="Pilot", airdate="2010-09-22">
+      
+    >> GoggleBox::TVRage::Episode.next_episode(show.showid)
+    => #<OpenStruct number="01x11", airtime=["2011-01-05T20:30:00-5:00", "1294273800"], title="Better with Skinny Jeans", airdate="2011-01-05">
+      
+    >> GoggleBox::TVRage::Episode.latest_episode(show.showid)
+    => #<OpenStruct number="01x10", title="Better with Christmas Crap", airdate="2010-12-08">
+    
 ### What doesn't it do?
 At the minute, it doesn't access the full functionality of the TVRage API. For example, it doesn't yet hook into the TVRage Scheduler or Countdown
 as these are intended for a future release.

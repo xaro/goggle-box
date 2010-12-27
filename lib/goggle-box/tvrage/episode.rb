@@ -8,22 +8,22 @@ module GoggleBox
       class << self
         def listings_by_show(show_id = nil)
           response = get('/feeds/episode_list.php', :query => { :sid => show_id }).parsed_response['Show']['Episodelist']
-          response.objectify
+          response.nil? ? [] : response.objectify
         end
         
         def information(show_id, episode)
           response = get('/feeds/episodeinfo.php', :query => { :sid => show_id, :ep => episode }).parsed_response['show']['episode']
-          response.objectify
+          response.nil? ? [] : response.objectify
         end
         
-        def next_episode(show_id, episode)
+        def next_episode(show_id, episode = '1x01')
           response = get('/feeds/episodeinfo.php', :query => { :sid => show_id, :ep => episode }).parsed_response['show']['nextepisode']
-          response.objectify
+          response.nil? ? [] : response.objectify
         end
         
-        def latest_episode(show_id, episode)
+        def latest_episode(show_id, episode = '1x01')
           response = get('/feeds/episodeinfo.php', :query => { :sid => show_id, :ep => episode }).parsed_response['show']['latestepisode']
-          response.objectify
+          response.nil? ? [] : response.objectify
         end
       end
     end
