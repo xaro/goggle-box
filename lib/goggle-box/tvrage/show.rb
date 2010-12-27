@@ -6,7 +6,7 @@ module GoggleBox
       base_uri 'services.tvrage.com'
               
       class << self        
-        def show_info(show_id)
+        def new(show_id)
           response = get('/myfeeds/showinfo.php', :query => {:key => 'd61mzsd8LETGxD0CAL7e', :sid => show_id}).parsed_response['Showinfo']
           response.nil? ? [] : response.objectify
         end        
