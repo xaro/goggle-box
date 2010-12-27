@@ -7,7 +7,7 @@ module GoggleBox::TVRage
       @key = "d61mzsd8LETGxD0CAL7e"
     end
     
-    describe "with id" do
+    describe "a show with a real ID" do
       before do
         xml = File.read("spec/xml/tvrage/show/better_with_you.xml")
         FakeWeb.register_uri(:get, "http://services.tvrage.com/myfeeds/showinfo.php?key=#{@key}&sid=#{@show_id}", :body => xml)
