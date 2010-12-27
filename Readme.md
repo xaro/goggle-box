@@ -47,11 +47,11 @@ At the minute, it doesn't access the full functionality of the TVRage API. For e
 as these are intended for a future release.
 
 ### Still todo
-  1) Finish off less important TVRage functionality (countdowns etc)
-  2) Implement mappings to override default schema of TVRage and other providers response
-  3) Plug in TheTVDB, IMDB etc
-  4) Tests could be better - they'll improve over time and change
+1. Finish off less important TVRage functionality (countdowns etc)
+2. Implement mappings to override default schema of TVRage and other providers response (season to seasons etc)
+3. Plug in TheTVDB, IMDB etc
+4. Tests could be better - they'll improve over time and change
 
 ### Thanks
-Caius - For the name
-hsume2 - I based the original tests on those from sofa.
+* Caius - For the name
+* hsume2 - I based the original tests on those from sofa.
