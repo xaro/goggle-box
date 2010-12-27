@@ -4,13 +4,12 @@ module GoggleBox::TVRage
   describe Show do
     before do
       @show_id = 25745
-      @key = "d61mzsd8LETGxD0CAL7e"
     end
     
     describe "a show with a real ID" do
       before do
         xml = File.read("spec/xml/tvrage/show/better_with_you.xml")
-        FakeWeb.register_uri(:get, "http://services.tvrage.com/myfeeds/showinfo.php?key=#{@key}&sid=#{@show_id}", :body => xml)
+        FakeWeb.register_uri(:get, "http://services.tvrage.com/feeds/showinfo.php?sid=#{@show_id}", :body => xml)
       end
 
       subject { Show.new(@show_id) }      
@@ -33,12 +32,98 @@ module GoggleBox::TVRage
         :airtime => "20:30",
         :airday => "Wednesday",
         :timezone => "GMT-5 -DST",
-        :akas => OpenStruct.new(:aka => ["Better Together", "Leapfrog", "That Couple"]),
+        :akas => OpenStruct.new(:aka => ["Better Together", "Leapfrog", "That Couple"])
       }.each do |attr, value|
-        it "should get ##{attr}" do
+        it "Show should respond to #{attr}" do
           subject.send(attr).should == value
         end
       end
+
+      describe "lazy loading of show and episode information together" do
+        before do
+          xml = File.read("spec/xml/tvrage/show/better_with_you_full_one_season.xml")
+          FakeWeb.register_uri(:get, "http://services.tvrage.com/feeds/full_show_info.php?sid=#{@show_id}", :body => xml)
+        end
+
+        subject { Show.new(@show_id, :lazy => true) }  
+        { 
+          :showid => "25745",
+          :name => "Better With You",
+          :showlink => "http://tvrage.com/Better_With_You",
+          :image => "http://images.tvrage.com/shows/26/25745.jpg",
+          :started => "Sep/22/2010",
+          :ended => nil,
+          :origin_country => "US",
+          :status => "New Series",
+          :classification => "Scripted",
+          :genres => OpenStruct.new(:genre => ["Comedy", "Family"]),
+          :runtime => "30",
+          :network => "ABC",
+          :airtime => "20:30",
+          :airday => "Wednesday",
+          :timezone => "GMT-5 -DST",
+          :akas => OpenStruct.new(:aka => ["Better Together", "Leapfrog", "That Couple"])
+        }.each do |attr, value|
+          it "Show should respond to #{attr}" do
+            subject.send(attr).should == value
+          end
+        end
+        
+        it "Show should respond to episodelist" do
+          subject.episodelist.class.should be(OpenStruct)
+        end
+
+        describe "Shows with just one season" do
+          it "Episodelist should have an OpenStruct of a season if just one" do
+            subject.episodelist.season.class.should be(OpenStruct)
+          end
+
+          it "Season should have an array of episodes if more than one" do
+            subject.episodelist.season.episode.class.should be(Array)
+          end
+          
+          it "Season should more than one episode to constitute an array" do
+            subject.episodelist.season.episode.size.should have_at_least(2).items
+          end
+        end
+
+        describe "Shows with more than one season" do
+          before do
+            xml = File.read("spec/xml/tvrage/show/better_with_you_empty_second.xml")
+            FakeWeb.register_uri(:get, "http://services.tvrage.com/feeds/full_show_info.php?sid=#{@show_id}", :body => xml)
+          end
+          
+          it "Episodelist should have an Array of seasons" do
+            subject.episodelist.season.class.should be(Array)
+          end
+
+          it "Array of Seasons shouldn't be equal to one" do
+            subject.episodelist.season.size.should have_at_least(2).items
+          end
+          
+          it "Episode should have an OpenStruct if only one episode" do
+            subject.episodelist.season[1].episode.class.should be(OpenStruct)
+          end
+          
+        end   
+      end
     end
+
+    describe "an invalid show id" do
+      before do
+        xml = File.read("spec/xml/tvrage/show/no_results.xml")
+        FakeWeb.register_uri(:get, "http://services.tvrage.com/feeds/showinfo.php?sid=#{@show_id}", :body => xml)
+      end
+
+      subject { Show.new(@show_id) }  
+      it "should be an array" do
+        subject.class.should be(Array)
+      end
+    
+      it "should be an empty array" do
+        subject.should be_empty
+      end
+    end
+
   end
 end

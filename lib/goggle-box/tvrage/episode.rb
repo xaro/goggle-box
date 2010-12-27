@@ -6,13 +6,23 @@ module GoggleBox
       base_uri 'services.tvrage.com'
       
       class << self
-        def episode_list_by_season_for_show(show_id = nil)
-          response = get('/myfeeds/episode_list.php', :query => {:key => 'd61mzsd8LETGxD0CAL7e', :sid => show_id}).parsed_response['Show']['Episodelist']
+        def listings_by_show(show_id = nil)
+          response = get('/feeds/episode_list.php', :query => { :sid => show_id }).parsed_response['Show']['Episodelist']
           response.objectify
         end
         
-        def episode_info(show_id, episode)
-          response = get('/myfeeds/episodeinfo.php', :query => {:key => 'd61mzsd8LETGxD0CAL7e', :sid => show_id, :ep => episode}).parsed_response['show']
+        def information(show_id, episode)
+          response = get('/feeds/episodeinfo.php', :query => { :sid => show_id, :ep => episode }).parsed_response['show']['episode']
+          response.objectify
+        end
+        
+        def next_episode(show_id, episode)
+          response = get('/feeds/episodeinfo.php', :query => { :sid => show_id, :ep => episode }).parsed_response['show']['nextepisode']
+          response.objectify
+        end
+        
+        def latest_episode(show_id, episode)
+          response = get('/feeds/episodeinfo.php', :query => { :sid => show_id, :ep => episode }).parsed_response['show']['latestepisode']
           response.objectify
         end
       end

@@ -5,9 +5,15 @@ module GoggleBox
       format :xml
       base_uri 'services.tvrage.com'
               
-      class << self        
-        def new(show_id = nil)
-          response = get('/myfeeds/showinfo.php', :query => {:key => 'd61mzsd8LETGxD0CAL7e', :sid => show_id}).parsed_response['Showinfo']
+      class << self
+        def search(show_name = nil)
+          response = get('/feeds/search.php', :query => { :show => show_name }).parsed_response['Results']['show']
+          response.nil? ? [] : response.objectify
+        end
+        
+        def new(show_id = nil, options = {})
+          params = options[:lazy] ? { :file => 'full_show_info', :tag => 'Show' } : { :file => 'showinfo', :tag => 'Showinfo' }          
+          response = get("/feeds/#{params[:file]}.php", :query => { :sid => show_id }).parsed_response["#{params[:tag]}"]
           response.nil? ? [] : response.objectify
         end        
       end

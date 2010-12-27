@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Show> 
+  <name>Better With You</name> 
+  <totalseasons>1</totalseasons> 
+  <showid>25745</showid> 
+  <showlink>http://tvrage.com/Better_With_You</showlink> 
+  <started>Sep/22/2010</started> 
+  <ended></ended> 
+  <image>http://images.tvrage.com/shows/26/25745.jpg</image> 
+  <origin_country>US</origin_country> 
+  <status>New Series</status> 
+  <classification>Scripted</classification> 
+  <genres><genre>Comedy</genre><genre>Family</genre></genres> 
+  <runtime>30</runtime> 
+  <network country="US">ABC</network> 
+  <airtime>20:30</airtime> 
+  <airday>Wednesday</airday> 
+  <timezone>GMT-5 -DST</timezone> 
+  <akas>
+    <aka attr="working title">Better Together</aka>
+    <aka attr="Alternate title" country="US">Leapfrog</aka>
+    <aka attr="Alternate title" country="US">That Couple</aka>
+  </akas> 
+  <Episodelist>  
+    <Season no="1"> 
+      <episode>
+        <epnum>1</epnum>
+        <seasonnum>01</seasonnum>
+        <prodnum>296777</prodnum>
+        <airdate>2010-09-22</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1064933988</link>
+        <title>Pilot</title>
+        <screencap>http://images.tvrage.com/screencaps/129/25745/1064933988.png</screencap>
+      </episode> 
+      <episode>
+        <epnum>2</epnum>
+        <seasonnum>02</seasonnum>
+        <prodnum>2J5805</prodnum>
+        <airdate>2010-09-29</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1064977432</link>
+        <title>Better with Firehouse</title>
+        <screencap>http://images.tvrage.com/screencaps/129/25745/1064977432.jpg</screencap>
+      </episode> 
+      <episode>
+        <epnum>3</epnum>
+        <seasonnum>03</seasonnum>
+        <prodnum>2J5804</prodnum>
+        <airdate>2010-10-06</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1064977433</link>
+        <title>Better with Ben</title>
+        <screencap>http://images.tvrage.com/screencaps/129/25745/1064977433.jpg</screencap>
+      </episode> 
+      <episode>
+        <epnum>4</epnum>
+        <seasonnum>04</seasonnum>
+        <prodnum>2J5802</prodnum>
+        <airdate>2010-10-13</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1064977434</link>
+        <title>Better with Fighting</title>
+        <screencap>http://images.tvrage.com/screencaps/129/25745/1064977434.jpg</screencap>
+      </episode> 
+      <episode>
+        <epnum>5</epnum>
+        <seasonnum>05</seasonnum>
+        <prodnum>2J5806</prodnum>
+        <airdate>2010-10-20</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1064977435</link>
+        <title>Better with Little Buddy</title>
+        <screencap>http://images.tvrage.com/screencaps/129/25745/1064977435.jpg</screencap>
+      </episode> 
+      <episode>
+        <epnum>6</epnum>
+        <seasonnum>06</seasonnum>
+        <prodnum>2J5807</prodnum>
+        <airdate>2010-10-27</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1064985401</link>
+        <title>Better with Halloween</title>
+        <screencap>http://images.tvrage.com/screencaps/129/25745/1064985401.png</screencap>
+      </episode> 
+      <episode>
+        <epnum>7</epnum>
+        <seasonnum>07</seasonnum>
+        <prodnum>2J5808</prodnum>
+        <airdate>2010-11-03</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1064987518</link>
+        <title>Better With Road Joel</title>
+        <screencap>http://images.tvrage.com/screencaps/129/25745/1064987518.jpg</screencap>
+      </episode> 
+      <episode>
+        <epnum>8</epnum>
+        <seasonnum>08</seasonnum>
+        <prodnum>2J5811</prodnum>
+        <airdate>2010-11-17</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1064988828</link>
+        <title>Better with Flirting</title>
+        <screencap>http://images.tvrage.com/screencaps/129/25745/1064988828.png</screencap>
+      </episode> 
+      <episode>
+        <epnum>9</epnum>
+        <seasonnum>09</seasonnum>
+        <prodnum>2J5809</prodnum>
+        <airdate>2010-11-24</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1064988829</link>
+        <title>Better with Thanksgiving</title>
+        <screencap>http://images.tvrage.com/screencaps/129/25745/1064988829.jpg</screencap>
+      </episode> 
+      <episode>
+        <epnum>10</epnum>
+        <seasonnum>10</seasonnum>
+        <prodnum>2J5810</prodnum>
+        <airdate>2010-12-08</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1064995976</link>
+        <title>Better with Christmas Crap</title>
+        <screencap>http://images.tvrage.com/screencaps/129/25745/1064995976.jpg</screencap>
+      </episode> 
+      <episode>
+        <epnum>11</epnum>
+        <seasonnum>11</seasonnum>
+        <prodnum></prodnum>
+        <airdate>2011-01-05</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1065001299</link>
+        <title>Better with Skinny Jeans</title>
+      </episode> 
+      <episode>
+        <epnum>12</epnum>
+        <seasonnum>12</seasonnum>
+        <prodnum></prodnum>
+        <airdate>2011-01-12</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1065001300</link>
+        <title>Better Without a Couch</title>
+      </episode> 
+    </Season>
+    <Season no="2">
+      <episode>
+        <epnum>12</epnum>
+        <seasonnum>12</seasonnum>
+        <prodnum></prodnum>
+        <airdate>2011-01-12</airdate>
+        <link>http://www.tvrage.com/Better_With_You/episodes/1065001300</link>
+        <title>Better Without a Couch</title>
+      </episode> 
+    </Season>
+  </Episodelist> 
+</Show>

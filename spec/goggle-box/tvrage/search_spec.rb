@@ -1,19 +1,18 @@
 require 'spec_helper'
 
 module GoggleBox::TVRage
-  describe Search do
+  describe Show do
     before do
       @show_name = "Better With You"
-      @key = "d61mzsd8LETGxD0CAL7e"
     end
     
     describe "a successful search" do
       before do
         xml = File.read("spec/xml/tvrage/search/better_with_you.xml")
-        FakeWeb.register_uri(:get, "http://services.tvrage.com/myfeeds/search.php?key=#{@key}&show=#{URI.escape(@show_name)}", :body => xml)
+        FakeWeb.register_uri(:get, "http://services.tvrage.com/feeds/search.php?show=#{URI.escape(@show_name)}", :body => xml)
       end
       
-      subject { Search.new(@show_name) }
+      subject { Show.search(@show_name) }
       it "Resultset should be an array" do
         subject.class.should be(Array)
       end
@@ -38,7 +37,7 @@ module GoggleBox::TVRage
         :classification => "Scripted",
         :genres => OpenStruct.new(:genre => ["Comedy", "Family"])
       }.each do |attr, value|
-        it "should respond to #{attr}" do
+        it "Show should respond to #{attr}" do
           subject.first.send(attr).should == value
         end
       end 
@@ -47,10 +46,10 @@ module GoggleBox::TVRage
     describe "an unsuccessful search" do
       before do
         xml = File.read("spec/xml/tvrage/search/no_results.xml")
-        FakeWeb.register_uri(:get, "http://services.tvrage.com/myfeeds/search.php?key=#{@key}&show=#{URI.escape(@show_name)}", :body => xml)
+        FakeWeb.register_uri(:get, "http://services.tvrage.com/feeds/search.php?show=#{URI.escape(@show_name)}", :body => xml)
       end
  
-      subject { Search.new(@show_name) }  
+      subject { Show.search(@show_name) }  
       it "should be an array" do
         subject.class.should be(Array)
       end

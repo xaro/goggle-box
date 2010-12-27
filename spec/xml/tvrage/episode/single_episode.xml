@@ -1,0 +1,33 @@
+<show id='25745'>
+  <name>Better With You</name>
+  <link>http://www.tvrage.com/Better_Together</link>
+  <started>2010-09-22</started>
+  <ended></ended>
+  <country>USA</country>
+  <status>New Series</status>
+  <classification>Scripted</classification>
+  <genres>
+    <genre>Comedy</genre>
+    <genre>Family</genre>
+  </genres>
+  <airtime>Wednesday at 08:30 pm</airtime>
+  <runtime>30</runtime>
+  <episode>
+    <number>01x01</number>
+    <title>Pilot</title>
+    <airdate>2010-09-22</airdate>
+    <url>http://www.tvrage.com/Better_Together/episodes/1064933988</url>
+  </episode>
+  <latestepisode>
+    <number>01x10</number>
+    <title>Better with Christmas Crap</title>
+    <airdate>2010-12-08</airdate>
+  </latestepisode>
+  <nextepisode>
+    <number>01x11</number>
+    <title>Better with Skinny Jeans</title>
+    <airdate>2011-01-05</airdate>
+    <airtime format='RFC3339'>2011-01-05T20:30:00-5:00</airtime>
+    <airtime format='GMT+0 NODST'>1294273800</airtime>
+  </nextepisode>
+</show>
