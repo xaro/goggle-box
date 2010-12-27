@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Paul Ingham"]
   s.email       = ["paul.ingham@beefeatingmonkeys.com"]
-  s.homepage    = "http://www.beefeatingmonkeys.com"
-  s.summary     = %q{}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "http://www.github.com/Numbers/goggle-box"
+  s.summary     = %q{A small ruby library for implementing with the TVRage API.}
+  s.description = %q{A small ruby library for implementing with the TVRage API.}
 
   s.rubyforge_project = "goggle-box"
 
@@ -20,5 +20,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   
   s.add_dependency(%q<httparty>)
-  s.add_dependency(%q<rspec>)
+  s.add_development_dependency(%q<rspec>)
 end
