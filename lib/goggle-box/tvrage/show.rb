@@ -8,7 +8,7 @@ module GoggleBox
       class << self
         def search(show_name = nil)
           response = get('/feeds/search.php', :query => { :show => show_name }).parsed_response['Results']['show']
-          response.nil? ? [] : response.objectify
+          response.nil? ? [] : response.objectify(self)
         end
         
         def new(show_id = nil, options = {})
