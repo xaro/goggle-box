@@ -1,5 +1,5 @@
 module GoggleBox
-  module TVRage
+  module TVRage    
     require 'goggle-box/tvrage/show.rb'
     require 'goggle-box/tvrage/episode.rb'
   end

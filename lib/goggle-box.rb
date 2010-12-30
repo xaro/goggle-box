@@ -6,14 +6,12 @@
 
 module GoggleBox
   require 'httparty'
-  require 'goggle-box/tvrage.rb'
-  require 'goggle-box/thetvdb.rb'
+  autoload :TVRage, 'goggle-box/tvrage.rb'
   
   class << self
     attr_accessor :adapter    
     def adapter
-      @adapter ||= GoggleBox::TVRage
-      # require "goggle-box/thetvdb.rb"
+      @adapter ||= GoggleBox::TVRage      
     end
   end
 end
